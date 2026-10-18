@@ -1,0 +1,50 @@
+{
+  "name": "dsh-ask-assistant",
+  "version": "0.1.0",
+  "description": "DSH 插件：在侧边栏底部动作区加一个「问助理」按钮，点击后用右侧栏内置浏览器打开 DeepSeek 网页版对话，随手问小问题不消耗 DSH 会话 token。",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "sidebar",
+    "assistant",
+    "chat",
+    "browser"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "README.en.md",
+    "LICENSE",
+    "docs"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ytftu/dsh-ask-assistant.git"
+  },
+  "homepage": "https://github.com/ytftu/dsh-ask-assistant#readme",
+  "bugs": {
+    "url": "https://github.com/ytftu/dsh-ask-assistant/issues"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": []
+    }
+  }
+}
