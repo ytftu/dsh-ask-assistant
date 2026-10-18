@@ -1,0 +1,7 @@
+# 由 dsh-ask-assistant 提供的 bundle 层。
+# 宿主半边（lib/index.js）只负责声明插件；界面完全由浏览器半边
+# （lib/client.js，经 package.json 的 dsh.client 被发现并加载）通过
+# 官方插槽 sidebar.footer.action 渲染，不需要改 asar。
+- insert:
+    - id: ask-assistant
+      name: 'dsh-ask-assistant'
